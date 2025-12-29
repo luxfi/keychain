@@ -64,6 +64,9 @@ type ledgerSigner struct {
 }
 
 // NewLedgerKeychain creates a new ledger keychain
+// NewLedgerKeychainFromIndices is an alias for NewLedgerKeychain
+var NewLedgerKeychainFromIndices = NewLedgerKeychain
+
 func NewLedgerKeychain(ledger Ledger, indices []uint32) (Keychain, error) {
 	if len(indices) == 0 {
 		return nil, ErrInvalidIndicesLength
